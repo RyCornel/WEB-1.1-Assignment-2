@@ -76,18 +76,18 @@ def message_results():
 @app.route('/calculator')
 def calculator():
     """Shows the user a form to enter 2 numbers and an operation."""
-    return """
-    
-    """
+    return render_template('calculator_form.html')
 
 @app.route('/calculator_results')
 def calculator_results():
-    operand1 = int(request.args.get('operand1'))
-    operand2 = int(request.args.get('operand2'))
-    option_value = request.args.get('operation')
-    
 
-    return render_template(calculator_results.html)
+    context = {
+        'operand1' : int(request.args.get('operand1')),
+        'operand2' : int(request.args.get('operand2')),
+        'operation' : request.args.get('operation')
+    }
+
+    return render_template('calculator_results.html', **context)
 
 
 HOROSCOPE_PERSONALITIES = {
