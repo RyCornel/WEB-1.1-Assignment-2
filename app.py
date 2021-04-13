@@ -1,4 +1,5 @@
 from flask import Flask, request, render_template
+import math
 import random
 
 app = Flask(__name__)
@@ -76,24 +77,17 @@ def message_results():
 def calculator():
     """Shows the user a form to enter 2 numbers and an operation."""
     return """
-    <form action="/calculator_results" method="GET">
-        Please enter 2 numbers and select an operator.<br/><br/>
-        <input type="number" name="operand1">
-        <select name="operation">
-            <option value="add">+</option>
-            <option value="subtract">-</option>
-            <option value="multiply">*</option>
-            <option value="divide">/</option>
-        </select>
-        <input type="number" name="operand2">
-        <input type="submit" value="Submit!">
-    </form>
+    
     """
 
 @app.route('/calculator_results')
 def calculator_results():
-    """Shows the user the result of their calculation."""
-    pass
+    operand1 = int(request.args.get('operand1'))
+    operand2 = int(request.args.get('operand2'))
+    option_value = request.args.get('operation')
+    
+
+    return render_template(calculator_results.html)
 
 
 HOROSCOPE_PERSONALITIES = {

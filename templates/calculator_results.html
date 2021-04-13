@@ -6,7 +6,16 @@
     <body>
         <!-- Your HTML code goes here! -->
 
-
+        {% if option_value == "add" %}
+             You chose to add {operand1} and {operand2}. That equals: {operand1} + {operand2}.
+        {% elif option_value == "subtract" %}
+             operand1 - operand2
+        {% elif option_value == "multiply" %}
+             operand1 * operand2
+        {% elif option_value == "divide" %}
+             operand1 / operand2
+        {% else %}
+             None
 
 
 
