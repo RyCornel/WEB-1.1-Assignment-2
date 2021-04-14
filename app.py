@@ -118,9 +118,9 @@ def horoscope_results():
     lucky_number = random.randint(1,99)
 
     context = {
-        'horoscope_sign': horoscope_sign,
-        'personality': users_personality, 
-        'lucky_number': lucky_number
+        'horoscope_sign': request.args.get('horoscope_sign'),
+        'personality': request.args.get('users_personality'), 
+        'lucky_number': request.args.get('lucky_number')
     }
 
     return render_template('horoscope_results.html', **context)
