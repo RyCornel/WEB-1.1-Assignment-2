@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Horoscope Results</title>
+    </head>
+    <body>
+        <!-- Your HTML code goes here! -->
+        {% if horoscope_sign == 'aries' %}
+            <h3>{{aries}}</h3>
+        {% elif horoscope_sign == 'taurus' %}
+            <h3>{{taurus}}</h3>
+        {% elif horoscope_sign == 'gemini' %}
+            <h3>{{gemini}}</h3>
+        {% elif horoscope_sign == 'cancer' %}
+            <h3>{{cancer}}</h3>
+        {% elif horoscope_sign == 'leo' %}
+            <h3>{{leo}}</h3>
+        {% elif horoscope_sign == 'virgo' %}
+            <h3>{{virgo}}</h3>
+        {% elif horoscope_sign == 'libra' %}
+            <h3>{{libra}}</h3>
+        {% elif horoscope_sign == 'scorpio' %}
+            <h3>{{scorpio}}</h3>
+        {% elif horoscope_sign == 'sagittarius' %}
+            <h3>{{sagittarius}}</h3>
+        {% elif horoscope_sign == 'capricorn' %}
+            <h3>{{capricorn}}</h3>
+        {% elif horoscope_sign == 'aquarius' %}
+            <h3>{{aquarius}}</h3>
+        {% elif horoscope_sign == 'pisces' %}
+            <h3>{{pisces}}</h3>
+        {% endif %} 
+
+        <h3>{{users_name}} {{horoscope_sign}} ,and your lucky number is {{lucky_number}}</h3>
+        
+
+        
+        
+    </body>
+</html>

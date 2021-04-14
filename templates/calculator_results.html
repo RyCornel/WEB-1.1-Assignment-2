@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Calculator Results</title>
+    </head>
+    <body>
+        <!-- Your HTML code goes here! -->
+        {% if operation == 'add' %}
+            <h3> You chose to add {{operand1}} to {{operand2}}, which equals: {{operand1 + operand2}}! </h3>
+        {% elif operation == 'subtract' %}
+            <h3> You chose to subtract {{operand2}} from {{operand1}}, which equals: {{operand1 - operand2}}! </h3>
+        {% elif operation == 'multiply' %}
+            <h3> You chose to multiply {{operand1}} with {{operand2}}, which equals: {{operand1 * operand2}}! </h3>
+        {% elif operation == 'divide' %}
+            <h3> You chose {{operand1}} divided by {{operand2}}, which equals: {{operand1 // operand2}}! </h3>
+        {% endif %} 
+        
+
+
+
+        
+    </body>
+</html>
