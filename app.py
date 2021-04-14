@@ -115,7 +115,7 @@ def horoscope_results():
     users_personality = ''
 
     # TODO: Generate a random number from 1 to 99
-    lucky_number = 0
+    lucky_number = random.randint(1,99)
 
     context = {
         'horoscope_sign': horoscope_sign,
